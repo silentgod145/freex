@@ -7,7 +7,7 @@
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Free", "Sentinel")
+local Window = Library.CreateLib("fREEXHUB", "Sentinel")
 local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Spinbot")
 
@@ -46,9 +46,14 @@ game.Players.LocalPlayer.Character.Humanoid.Jump = false
 wait(1)
 end)
 
+Section:NewButton("Headless", "Gives u perm Headless", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PewPewBoy/loadstrings/main/headless", true))() 
+end)
 
 
-
+Section:NewButton("Korblox", "Gives u perm Korblox", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PewPewBoy/loadstrings/main/korblox%20right%20leg", true))() 
+end)
 
 Section:NewButton("Speedglitch", "Makes u faster", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/Pzj1hGHa", true))() 
@@ -56,7 +61,9 @@ end)
 
 
 
-
+Section:NewButton("fe korblox", "fe korblox", function()
+    game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
+end)
 
 
 
@@ -213,4 +220,4 @@ end)
 --// Credits 
 
 local Tab = Window:NewTab("Credits")
-local Section = Tab:NewSection("Me")
+local Section = Tab:NewSection("GOING")
