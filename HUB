@@ -1,0 +1,157 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Free", "Sentinel")
+local Tab = Window:NewTab("Lock")
+
+Section:NewToggle("Silent Aim", "ToggleInfo", function(bool)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/nahurmiserable/creditstostefanuk/main/aim2"))()
+end)
+
+Section:NewToggle("Show FOV", "ToggleInfo", function(bool)
+    Aiming.ShowFOV = bool
+end)
+
+Section:NewToggle("Visible Check", "ToggleInfo", function(bool)
+    Aiming.VisibleCheck = bool
+end)
+
+Section:NewSlider("Size", "SliderInfo", 300, 3, function(value) -- 500 (MaxValue) | 0 (MinValue)
+    Aiming.FOV = value
+end)
+
+Section:NewSlider("Hitchance", "SliderInfo", 100, 0, function(value) -- 500 (MaxValue) | 0 (MinValue)
+    Aiming.HitChance = value
+end)
+
+
+
+Section:NewButton("Best animations", "Changes ur animations to the best and pro animations", function()
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083439238"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+wait(1)
+end)
+Section:NewButton("spinbot (X)", "the key is x", function()
+        local spin = false
+        local usi = game:GetService("UserInputService");
+        usi.InputBegan:Connect(function(Fade, Fadex)
+            if (Fade.KeyCode == Enum.KeyCode.X and Fadex == false) then
+                if spin == false then
+                    spin = true
+                    wait()
+                    getgenv().urspeed = 500
+                    local Charac = game.Players.LocalPlayer.Character
+                    while wait() do
+                        Charac.HumanoidRootPart.CFrame = Charac.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(urspeed), 0)
+                    end
+                else
+                    spin = false
+                    getgenv().urspeed = 0
+                end
+            end
+        end)
+    end)
+
+local Tab = Window:NewTab("Teleports")
+local Section = Tab:NewSection("Teleports")
+Section:NewButton("Uphill Mountain","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(485.651947, 112.5, -644.316833, -0.998899043, 1.33881997e-06, 0.0469136797, 8.00526664e-07, 1, -1.14929126e-05, -0.0469136797, -1.14426994e-05, -0.998899043)
+end)
+
+Section:NewButton("AK Mountain","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-658.31897, 80.9998474, -778.077576, -0.142138869, 1.05273443e-08, -0.989845812, 4.51260629e-09, 1, 9.98731764e-09, 0.989845812, -3.04721426e-09, -0.142138869)
+end)
+
+
+Section:NewButton("Playground Mountain","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-260.836182, 126.424866, -877.783875, -0.977067351, -1.56508904e-05, -0.212922528, 9.92513264e-07, 1, -7.80593255e-05, 0.212922528, -7.64806027e-05, -0.977067351)
+end)
+
+Section:NewButton("Bank Buildings","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-327.583862, 80.4338913, -278.811951, -0.0466220938, -1.94237373e-08, 0.998912573, 1.07243459e-07, 1, 2.44502392e-08, -0.998912573, 1.08266761e-07, -0.0466220938)
+end)  
+Section:NewButton("Rev Mountain","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-659.053162, 110.748001, -158.224365, 0.146754071, -2.38941595e-08, -0.989172995, -1.60316838e-09, 1, -2.43935396e-08, 0.989172995, 5.16566212e-09, 0.146754071)
+end)
+Section:NewButton("Casino Mountain","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1048.95093, 110.254997, -154.554016, 0.198458344, 0.0412604436, -0.979240835, -4.06676299e-05, 0.999113858, 0.0420895219, 0.98010987, -0.00831318926, 0.198284075)
+end) 
+Section:NewButton("Flank Mountain","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(376.730621, 130.748001, -245.620468, 0.996583343, 5.90310174e-06, -0.0825867951, -1.72590728e-06, 1, 5.06508768e-05, 0.0825867951, -5.03353003e-05, 0.996583343)
+end)  
+Section:NewButton("Gas Station","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(608.599426, 65.3087997, -267.643066, -0.414288431, -1.04483455e-09, -0.91014564, -1.30518893e-08, 1, 4.79309215e-09, 0.91014564, 1.38648408e-08, -0.41428)
+end) 
+local Tab = Window:NewTab("Misc scripts")
+local Section = Tab:NewSection("Misc")
+Section:NewButton("Lay spinbot","Makes u spin u must have spinbot activated to use this feauture",function()
+	local layspin = false
+    local usr = game:GetService("UserInputService");
+    usr.InputBegan:Connect(function(fade, fadex)
+        if (fade.KeyCode == Enum.KeyCode.U and fadex == false) then
+            if layspin == false then
+                layspin = true
+                wait()
+                getgenv().urspeed = 500
+                local plr = game.Players.LocalPlayer.Character
+                while wait() do
+                    plr.HumanoidRootPart.CFrame = plr.HumanoidRootPart.CFrame * CFrame.Angles(0, math.rad(urspeed), 0)
+                end
+            else
+                layspin = false
+                getgenv().urspeed = 0
+            end
+        end
+    end);
+    game:GetService('RunService').Stepped:connect(function()
+        if layspin == true then
+            local Animaion = Instance.new("Animation");
+            function stopTracks()
+                for Clas, Class in next, game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):GetPlayingAnimationTracks(
+    
+        ) do
+                    if (Class.Animation.AnimationId:match("rbxassetid")) then
+                        Class:Stop();
+                    end;
+                end;
+            end;
+            function loadAnimation(load)
+                if Animaion.AnimationId == load then
+                    Animaion.AnimationId = "1";
+                else
+                    Animaion.AnimationId = load;
+                    local humanod =
+                game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):LoadAnimation(
+                Animaion
+            );
+                    humanod:Play();
+                end;
+            end;
+            loadAnimation("rbxassetid://3152378852");
+            wait(1.2)
+        end
+    end)
+    game:GetService('RunService').Stepped:connect(function()
+        if layspin == false then
+            stopTracks();
+        end
+    end)
+end) 
+
+Section:NewButton("Esp","Gives u esp credits to ic3wolf",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua"))()
+end)
+local Tab = Window:NewTab("Keybind") 
+local Section = Tab:NewSection("Keybind")
+Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("noone LOL")
+
+
