@@ -1,6 +1,15 @@
+
+
+
+--// Main scripts
+
+
+
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Free", "Sentinel")
-local Tab = Window:NewTab("Lock")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Spinbot")
 
 Section:NewToggle("Silent Aim", "ToggleInfo", function(bool)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/nahurmiserable/creditstostefanuk/main/aim2"))()
@@ -36,6 +45,21 @@ Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
 game.Players.LocalPlayer.Character.Humanoid.Jump = false
 wait(1)
 end)
+
+
+
+
+
+Section:NewButton("Speedglitch", "Makes u faster", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Pzj1hGHa", true))() 
+end)
+
+
+
+
+
+
+
 Section:NewButton("spinbot (X)", "the key is x", function()
         local spin = false
         local usi = game:GetService("UserInputService");
@@ -56,6 +80,13 @@ Section:NewButton("spinbot (X)", "the key is x", function()
             end
         end)
     end)
+
+
+
+
+
+
+--// Teleports
 
 local Tab = Window:NewTab("Teleports")
 local Section = Tab:NewSection("Teleports")
@@ -87,6 +118,32 @@ end)
 Section:NewButton("Gas Station","Tps u to the specified location", function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(608.599426, 65.3087997, -267.643066, -0.414288431, -1.04483455e-09, -0.91014564, -1.30518893e-08, 1, 4.79309215e-09, 0.91014564, 1.38648408e-08, -0.41428)
 end) 
+
+
+Section:NewButton("School","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-581.790283, 68.4947281, 331.046448, 0.220051467, -7.56681329e-05, 0.975498199, -3.96428077e-05, 0.999999583, 8.65130132e-05, -0.975498199, -5.77078645e-05, 0.22005)
+end) 
+
+Section:NewButton("Circus","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(170.510178, 59.6617432, -944.884216, 0.806685388, -8.34191383e-08, 0.590979934, 9.47717194e-09, 1, 1.28217792e-07, -0.590979934, -9.78305081e-08, 0.806685388)
+end) 
+
+Section:NewButton("UFO","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.1504517, 138.999954, -691.819031, -0.935115993, -5.9791418e-08, -0.354341775, -3.10840989e-08, 1, -8.67077574e-08, 0.354341775, -7.0067415e-08, -0.935115993)
+end) 
+Section:NewButton("Bank Tree","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-374.538391, 102.052887, -440.20871, 0.958144963, 9.24065989e-06, -0.286283433, -9.98981818e-07, 1, 2.89345699e-05, 0.286283433, -2.74375216e-05, 0.958144963)
+end) 
+
+Section:NewButton("Circus Mountain","Tps u to the specified location", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(292.643799, 122.749977, -860.128784, 0.986730993, 5.09704545e-09, 0.162363499, -9.24942123e-10, 1, -2.57716568e-08, -0.162363499, 2.52795154e-08, 0.986730993)
+end) 
+
+Section:NewButton("Gym Top","Tps u to the specified location",function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-76.178093, 56.6998138, -629.940979, -0.9998914, -1.09370752e-07, 0.0147391548, -1.0945012e-07, 1, -4.57786342e-09, -0.0147391548, -6.1905685e-09, -0.9998914)
+end) 
+
+
 local Tab = Window:NewTab("Misc scripts")
 local Section = Tab:NewSection("Misc")
 Section:NewButton("Lay spinbot","Makes u spin u must have spinbot activated to use this feauture",function()
@@ -146,12 +203,14 @@ end)
 Section:NewButton("Esp","Gives u esp credits to ic3wolf",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua"))()
 end)
+
+
 local Tab = Window:NewTab("Keybind") 
 local Section = Tab:NewSection("Keybind")
 Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
 	Library:ToggleUI()
 end)
+--// Credits 
+
 local Tab = Window:NewTab("Credits")
-local Section = Tab:NewSection("noone LOL")
-
-
+local Section = Tab:NewSection("Me")
